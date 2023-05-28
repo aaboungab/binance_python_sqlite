@@ -39,7 +39,7 @@ for i in symbols:
   symbol_ticker = client.get_symbol_ticker(symbol=i)
   symbol_ticker_price = symbol_ticker['price']
 
-  data = (current_timestamp, i, ticker['openPrice'], ticker['highPrice'], ticker['lowPrice'], symbol_ticker_price ,ticker['priceChange'], f"{price_change:.2f}%") 
+  data = (current_timestamp, i, ticker['openPrice'], ticker['highPrice'], ticker['lowPrice'], symbol_ticker_price ,ticker['priceChange'], price_change) 
 
   print(",".join(map(str, data)))
 

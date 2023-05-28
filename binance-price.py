@@ -25,7 +25,7 @@ except:
     pass
 
 # Set up the Binance client
-api_key = os.getenv('binance_api_key')
+api_key = os.getenv('binanace_api_key')
 api_secret = os.getenv('binance_api_secret')
 client = Client(api_key,api_secret)
 
@@ -38,7 +38,7 @@ price_change = float(ticker['priceChangePercent'])
 symbol_ticker = client.get_symbol_ticker(symbol=symbol)
 symbol_ticker_price = symbol_ticker['price']
 
-data = (current_timestamp, symbol, ticker['openPrice'], ticker['highPrice'], ticker['lowPrice'], symbol_ticker_price ,ticker['priceChange'], f"{price_change:.2f}%") 
+data = (current_timestamp, symbol, ticker['openPrice'], ticker['highPrice'], ticker['lowPrice'], symbol_ticker_price ,ticker['priceChange'], price_change) 
 
 print(",".join(map(str, data)))
 
