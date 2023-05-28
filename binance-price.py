@@ -25,7 +25,7 @@ except:
     pass
 
 # Set up the Binance client
-api_key = os.getenv('binanace_api_key')
+api_key = os.getenv('binance_api_key')
 api_secret = os.getenv('binance_api_secret')
 client = Client(api_key,api_secret)
 
